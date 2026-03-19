@@ -43,7 +43,3 @@ From the simulations:
 - `Walkplot.py` – Plots trajectories of random walks in 1D.  
 - `README.md` – Documentation for this folder.
 
-## Contributing
-
-Additional simulations, improved analysis, or visualization enhancements are welcome. Please maintain consistency and document any new additions.
-
