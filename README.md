@@ -37,9 +37,24 @@ python simulation.py
 > Dependencies: `numpy`, `matplotlib` (and `manim` for animation-based models). Install individually as needed.
 
 ---
-
 ## Illustrations
 
+<table>
+  <tr>
+    <td align="center">
+      <img width="340" src="https://github.com/user-attachments/assets/6937740d-2095-45c9-9576-b356fd4d9142" />
+      <br><code>Ideal_Electron/3dhist.py</code>
+    </td>
+    <td align="center">
+      <img width="340" src="https://github.com/user-attachments/assets/87b935e6-f401-4318-9b38-71e0c65cf355" />
+      <br><code>Calculating_Activation.../report.pdf</code>
+    </td>
+    <td align="center">
+      <img width="340" src="https://github.com/user-attachments/assets/8ee57a9a-0144-4446-828a-db1fdae65aec" />
+      <br><code>Monte_Carlo_Methods/estimate_Gaussian.py</code>
+    </td>
+  </tr>
+</table>
 
 
 ## License
