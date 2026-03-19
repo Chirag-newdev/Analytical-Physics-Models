@@ -20,13 +20,6 @@ psi4.set_options({
 # Run SCF
 energy, wfn = psi4.energy('scf', return_wfn=True)
 
-# Generate cube files
-# psi4.cubeprop(wfn)
-# print("Number of basis functions:", wfn.nmo())
-# print("Number of occupied orbitals:", wfn.nalpha())
-# eps = wfn.epsilon_a().to_array()
-# print(eps)
+
 print("Dipole:", wfn.variable("SCF DIPOLE"))
-# F = wfn.Fa().to_array()
-# print(F)
 

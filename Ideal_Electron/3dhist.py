@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  
 
-# ye 2D walk ka 3D hist hai
 M = 100000
 N = 100 
 bin_width = 1 
