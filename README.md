@@ -3,6 +3,7 @@
 > Python simulations of analytical physics models combining rigorous mathematical derivations with computational visualizations of classical and modern systems.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue) ![License](https://img.shields.io/badge/License-MIT-green)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/satkarjuneja/Analytical-Physics-Models)
 
 ---
 
