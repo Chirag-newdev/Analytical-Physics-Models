@@ -1,0 +1,15 @@
+[
+  {
+    "category": "Random Walks",
+    "items": [
+      { "name": "1D Drunkard Walk", "path": "Ideal_Electron/web_src/Walkplot.html" },
+      { "name": "Mean and Mean_Sq", "path": "Ideal_Electron/web_src/means.html" }
+    ]
+  },
+  {
+    "category": "Statistics",
+    "items": [
+      { "name": "Histogram", "path": "plots/histogram.html" }
+    ]
+  }
+]
