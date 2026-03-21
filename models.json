@@ -9,8 +9,22 @@
   {
     "category": "Monte-Carlo Simulations",
     "items": [
-      { "name": "Estimate Pi MHMC V1", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_weak.html" },
-      { "name": "Estimate Pi MHMC V2", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_strong.html" }
+      { "name": "Importance Sampling", "path": "Monte_Carlo_Methods/Importance_Sampling.pdf" },
+      { "name": "Estimate π MHMC V1", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_weak.html" },
+      { "name": "Estimate π MHMC V2", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_strong.html" }
+    ]
+  }
+  ,
+  {
+    "category": "Modelling Using VMD",
+    "items": [
+      { "name": "3D Rotation Theory", "path": "Modelling_Using_VMD/3D_Rotation.pdf" }
+    ]
+  }
+  ,{
+    "category": "Calculation of Reaction Energies",
+    "items": [
+      { "name": "Reaction Report", "path": "Calculating_Activation_and_Reaction_Energy_Of_Reactions/report.pdf" }
     ]
   }
 ]
