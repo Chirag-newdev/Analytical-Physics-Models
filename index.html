@@ -8,14 +8,12 @@
 
 <style>
 :root {
-    /* Typography */
     --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --font-size-base: 14px;
     --font-size-title: 16px;
     --font-size-logo: 22px;
     --font-size-category: 12px;
 
-    /* Colors */
     --bg-main: #4d7194;
     --panel-bg: #ffffff;
     --topbar-bg: rgba(255, 255, 255, 0.8);
@@ -30,20 +28,17 @@
 
     --border-color: #e2e8f0;
 
-    /* Shadows */
     --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
                    0 2px 4px -1px rgba(0, 0, 0, 0.03);
 
     --shadow-sidebar: 2px 0 10px rgba(0, 0, 0, 0.02);
     --shadow-button: 0 4px 14px rgba(59, 130, 246, 0.3);
 
-    /* Radius */
     --radius-sm: 8px;
     --radius-md: 10px;
     --radius-lg: 15px;
     --radius-xl: 20px;
 
-    /* Spacing */
     --space-sm: 8px;
     --space-md: 12px;
     --space-lg: 20px;
@@ -64,7 +59,6 @@ body {
     font-size: var(--font-size-base);
 }
 
-/* Sidebar */
 #sidebar {
     width: 300px;
     padding: var(--space-xl);
@@ -72,9 +66,11 @@ body {
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
     box-shadow: var(--shadow-sidebar);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Logo */
 .logo {
     font-size: var(--font-size-logo);
     font-weight: 700;
@@ -89,7 +85,6 @@ body {
     content: '⚛';
 }
 
-/* Categories */
 .category {
     font-size: var(--font-size-category);
     font-weight: 600;
@@ -100,7 +95,6 @@ body {
     color: var(--text-accent);
 }
 
-/* Items */
 .item {
     padding: var(--space-md);
     margin-top: 4px;
@@ -122,17 +116,14 @@ body {
     font-weight: 600;
 }
 
-/* Main */
 #main {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: var(--space-lg);
-    /* background-color:var(--accent-primary); */
     background: var(--accent-primary);
 }
 
-/* Topbar */
 #topbar {
     height: 60px;
     display: flex;
@@ -152,7 +143,6 @@ body {
     font-weight: 600;
 }
 
-/* Button */
 .controls button {
     background: var(--accent-primary);
     border: none;
@@ -170,7 +160,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Viewer */
 #viewerContainer {
     flex: 1;
 }
@@ -183,13 +172,64 @@ body {
     background: white;
     box-shadow: var(--shadow-soft);
 }
+
+/* Feedback Section */
+.feedback {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.feedback h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.feedback textarea {
+    width: 100%;
+    height: 80px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    font-family: var(--font-main);
+    font-size: 13px;
+    resize: none;
+}
+
+.feedback button {
+    margin-top: 8px;
+    width: 100%;
+    background: var(--accent-primary);
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    background: var(--accent-primary-hover);
+}
 </style>
 </head>
 
 <body>
 
 <div id="sidebar">
-    <div class="logo">Analytical Physics Models</div>
+    <div>
+        <div class="logo">Analytical Physics Models</div>
+        <div id="menu"></div>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="feedback">
+        <h3>Feedback</h3>
+        <form action="https://formspree.io/f/mlgpvqqe" method="POST">
+            <textarea name="message" placeholder="Write your feedback..."></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </div>
 
 <div id="main">
@@ -212,7 +252,6 @@ let currentPath = null;
 function loadModel(path, name, element) {
     const viewer = document.getElementById("viewer");
     const title = document.getElementById("modelTitle");
-
     viewer.src = path;
     title.textContent = name;
     currentPath = path;
@@ -231,13 +270,13 @@ function reloadModel() {
 fetch("models.json")
 .then(res => res.json())
 .then(data => {
-    const sidebar = document.getElementById("sidebar");
+    const menu = document.getElementById("menu");
 
     data.forEach(section => {
         const cat = document.createElement("div");
         cat.textContent = section.category;
         cat.className = "category";
-        sidebar.appendChild(cat);
+        menu.appendChild(cat);
 
         section.items.forEach(model => {
             const item = document.createElement("div");
@@ -246,7 +285,7 @@ fetch("models.json")
 
             item.onclick = () => loadModel(model.path, model.name, item);
 
-            sidebar.appendChild(item);
+            menu.appendChild(item);
 
             if (!currentItem) {
                 loadModel(model.path, model.name, item);

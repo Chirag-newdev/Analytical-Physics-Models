@@ -9,8 +9,8 @@
   {
     "category": "Monte-Carlo Simulations",
     "items": [
-      { "name": "Estimate Pi using MHMC V1", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_weak.html" },
-      { "name": "Estimate Pi using MHMC V2", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_strong.html" }
+      { "name": "Estimate Pi MHMC V1", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_weak.html" },
+      { "name": "Estimate Pi MHMC V2", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_strong.html" }
     ]
   }
 ]
