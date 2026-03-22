@@ -69,7 +69,7 @@ def run_plotly(steps=50000, electrons=10000):
 
     fig.update_layout(title="Electron Random Walk Statistics")
 
-    fig.write_html("web_src/means.html")
+    fig.write_html("Ideal_Electron/web_src/means.html")
     fig.show()
 
 

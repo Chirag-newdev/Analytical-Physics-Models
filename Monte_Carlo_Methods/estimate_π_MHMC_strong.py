@@ -135,7 +135,7 @@ def run_plotly(N, epsilon):
     ,align="center", font=dict(size=20),)
     
     fig.update_layout(margin=dict(l=0, r=0, t=50, b=150))
-    fig.write_html("web_src/estimate_pi_MHMC_strong.html",config={"responsive": True})
+    fig.write_html("Monte_Carlo_Methods/web_src/estimate_pi_MHMC_strong.html",config={"responsive": True})
     fig.show(config={"responsive": True})
     
 run_plotly(100000,0.04)

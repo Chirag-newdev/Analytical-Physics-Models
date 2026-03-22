@@ -59,7 +59,7 @@ def run_plotly(N, lambd):
     ),font=dict(size=23))
     
     fig.update_layout(margin=dict(l=0, r=0, t=70, b=0))
-    fig.write_html("web_src/inverse_transform_sampling_exponential.html",config={"responsive": True})
+    fig.write_html("Monte_Carlo_Methods/web_src/inverse_transform_sampling_exponential.html",config={"responsive": True})
     fig.show(config={"responsive": True})
 
     fig.show()

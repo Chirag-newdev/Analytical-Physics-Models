@@ -75,8 +75,8 @@ def run_plotly():
         yaxis_title="Location"
     )
 
-    fig.write_html("web_src/Walkplot.html")
+    fig.write_html("Ideal_Electron/web_src/Walkplot.html")
     fig.show()
-
+    
 # run_matplotlib()
 run_plotly()
