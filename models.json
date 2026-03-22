@@ -11,7 +11,9 @@
     "items": [
       { "name": "Importance Sampling", "path": "Monte_Carlo_Methods/Importance_Sampling.pdf" },
       { "name": "Estimate π MHMC V1", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_weak.html" },
-      { "name": "Estimate π MHMC V2", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_strong.html" }
+      { "name": "Estimate π MHMC V2", "path": "Monte_Carlo_Methods/web_src/estimate_pi_MHMC_strong.html" },
+      { "name": "Inverse Transform Sampling of Exponential", "path": "Monte_Carlo_Methods/web_src/inverse_transform_sampling_exponential.html" }
+
     ]
   }
   ,
